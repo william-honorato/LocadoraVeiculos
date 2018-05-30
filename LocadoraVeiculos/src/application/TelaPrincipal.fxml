@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="245.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ClienteController">
+   <children>
+      <Button fx:id="btnAnterior" layoutX="59.0" layoutY="169.0" mnemonicParsing="false" onAction="#RegistroAnterior" text="&lt;" />
+      <Button fx:id="btnProximo" layoutX="126.0" layoutY="169.0" mnemonicParsing="false" onAction="#ProximoRegistro" text="&gt;">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <TextField fx:id="txtCodCliente" layoutX="62.0" layoutY="95.0" prefHeight="31.0" prefWidth="92.0" />
+      <TextField fx:id="txtNomeCliente" layoutX="193.0" layoutY="95.0" />
+      <TextField fx:id="txtDtNascimento" layoutX="416.0" layoutY="95.0" />
+      <Label layoutX="62.0" layoutY="63.0" text="ID:" />
+      <Label layoutX="193.0" layoutY="63.0" text="Nome:" />
+      <Label layoutX="416.0" layoutY="63.0" text="Data de Nascimento:" />
+   </children>
+</AnchorPane>
