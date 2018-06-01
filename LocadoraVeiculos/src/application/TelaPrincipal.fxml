@@ -6,18 +6,31 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="245.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ClienteController">
+<AnchorPane prefHeight="340.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ClienteController">
    <children>
-      <Button fx:id="btnAnterior" layoutX="59.0" layoutY="169.0" mnemonicParsing="false" onAction="#RegistroAnterior" text="&lt;" />
-      <Button fx:id="btnProximo" layoutX="126.0" layoutY="169.0" mnemonicParsing="false" onAction="#ProximoRegistro" text="&gt;">
+      <Button fx:id="btnAnterior" layoutX="100.0" layoutY="277.0" mnemonicParsing="false" onAction="#RegistroAnterior" prefHeight="31.0" prefWidth="45.0" text="&lt;" />
+      <Button fx:id="btnProximo" layoutX="157.0" layoutY="277.0" mnemonicParsing="false" onAction="#ProximoRegistro" prefHeight="31.0" prefWidth="45.0" text="&gt;">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <TextField fx:id="txtCodCliente" layoutX="62.0" layoutY="95.0" prefHeight="31.0" prefWidth="92.0" />
-      <TextField fx:id="txtNomeCliente" layoutX="193.0" layoutY="95.0" />
-      <TextField fx:id="txtDtNascimento" layoutX="416.0" layoutY="95.0" />
-      <Label layoutX="62.0" layoutY="63.0" text="ID:" />
-      <Label layoutX="193.0" layoutY="63.0" text="Nome:" />
-      <Label layoutX="416.0" layoutY="63.0" text="Data de Nascimento:" />
+      <TextField fx:id="txtCodCliente" disable="true" layoutX="39.0" layoutY="95.0" prefHeight="31.0" prefWidth="92.0" />
+      <TextField fx:id="txtNomeCliente" layoutX="171.0" layoutY="95.0" prefHeight="31.0" prefWidth="446.0" />
+      <TextField fx:id="txtDtNascimento" layoutX="640.0" layoutY="95.0" prefHeight="31.0" prefWidth="203.0" />
+      <Label layoutX="39.0" layoutY="63.0" text="Código:" />
+      <Label layoutX="173.0" layoutY="63.0" text="Nome:" />
+      <Label layoutX="640.0" layoutY="63.0" text="Data de Nascimento:" />
+      <TextField fx:id="txtRendimento" layoutX="202.0" layoutY="169.0" prefHeight="31.0" prefWidth="138.0" />
+      <ComboBox fx:id="comboEstadoCivil" layoutX="358.0" layoutY="169.0" prefHeight="31.0" prefWidth="229.0" />
+      <ComboBox fx:id="comboEstado" layoutX="606.0" layoutY="169.0" prefHeight="31.0" prefWidth="237.0" />
+      <Label layoutX="40.0" layoutY="140.0" text="Sexo:" />
+      <Label layoutX="202.0" layoutY="140.0" text="Rendimento:" />
+      <Label layoutX="358.0" layoutY="140.0" text="Estado Civil:" />
+      <Label layoutX="606.0" layoutY="140.0" text="Estado:" />
+      <ComboBox fx:id="comboSexo" layoutX="39.0" layoutY="169.0" prefHeight="31.0" prefWidth="138.0" />
+      <Button fx:id="btnSalvar" layoutX="692.0" layoutY="277.0" mnemonicParsing="false" onAction="#SalvarRegistro" text="Salvar" />
+      <Button fx:id="btnExcluir" layoutX="762.0" layoutY="277.0" mnemonicParsing="false" onAction="#ExcluirRegistro" text="Excluir" />
+      <Button fx:id="btnNovo" layoutX="625.0" layoutY="277.0" mnemonicParsing="false" onAction="#NovoRegistro" text="Novo" />
+      <Button fx:id="btnPrimeiro" layoutX="37.0" layoutY="277.0" mnemonicParsing="false" onAction="#ProximoPrimeiro" prefHeight="31.0" prefWidth="45.0" text="&lt;&lt;" />
+      <Button fx:id="btnUltimo" layoutX="218.0" layoutY="277.0" mnemonicParsing="false" onAction="#ProximoUltimo" prefHeight="31.0" prefWidth="45.0" text="&gt;&gt;" />
    </children>
 </AnchorPane>

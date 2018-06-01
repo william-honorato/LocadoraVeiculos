@@ -19,7 +19,8 @@ public class Main extends Application {
 			//TODO: Crie suas próprias teclas de atalho
 			scene.setOnKeyPressed(e -> System.out.println(e.getCode()));
 			
-			primaryStage.setTitle("FTT Form");
+			primaryStage.setTitle("Clientes");
+			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
