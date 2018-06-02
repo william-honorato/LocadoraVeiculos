@@ -23,7 +23,7 @@ public class ClienteDAO extends Conexao {
 		try {
 			Statement stm = conexao.createStatement();
 			
-			ResultSet rs = stm.executeQuery("select * from tb_clientes order by cod_cliente;");							
+			ResultSet rs = stm.executeQuery(sql);							
 			
 			while (rs.next()) {
 				idCliente = rs.getInt("cod_cliente");
@@ -39,7 +39,7 @@ public class ClienteDAO extends Conexao {
 			conexao.close();
 		}
 		
-		return idCliente++;
+		return idCliente+1;
 	}
 	
 	private Cliente Atualizar(Cliente c) throws SQLException {
@@ -58,6 +58,7 @@ public class ClienteDAO extends Conexao {
 			stmt.setString(4, c.getCod_estado_civil());
 			stmt.setString(5, Double.toString(c.getRendimento()));
 			stmt.setString(6, c.getCod_uf());
+			stmt.setString(7, Integer.toString(c.getCod_cliente()));
 			stmt.execute();
 		}
 		catch(Exception erro) {
@@ -129,9 +130,9 @@ public class ClienteDAO extends Conexao {
 				cliente.setNome(rs.getString("nome"));
 				cliente.setDt_nascimento(rs.getDate("dt_nascimento"));
 				cliente.setTipo_pessoa(rs.getString("tipo_pessoa"));
-				//cliente.setCod_estado_civil(rs.getInt("cod_estado_civil"));				
+				cliente.setCod_estado_civil(rs.getString("cod_estado_civil"));				
 				cliente.setRendimento(rs.getDouble("rendimento"));
-				//cliente.setCod_uf(rs.getInt("cod_uf"));
+				cliente.setCod_uf(rs.getString("cod_uf"));
 				listaClientes.add(cliente);
 			} //while
 
