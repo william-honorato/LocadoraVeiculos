@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<HBox alignment="CENTER" minHeight="300.0" minWidth="494.0" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane minHeight="300.0" minWidth="494.0">
+         <children>
+            <TextField layoutX="22.0" layoutY="54.0" />
+            <Text layoutX="22.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-size: 13px;" text="Código" />
+            <TextField layoutX="22.0" layoutY="138.0" />
+            <Text layoutX="22.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-font-size: 13px;" text="Nome" />
+            <Button layoutX="359.0" layoutY="246.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: #f0f8ff;" text="Salvar" />
+         </children>
+      </Pane>
+   </children>
+</HBox>
