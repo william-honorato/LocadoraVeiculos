@@ -1,7 +1,5 @@
 package application;
 	
-
-
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -13,19 +11,16 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 
-
 public class Main extends Application {
 	
 	private double x, y;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("TelaMain.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("telaMain.fxml"));
 
 			Scene scene = new Scene(root);
-			scene.setFill(Color.TRANSPARENT);
-			
-			
+			scene.setFill(Color.TRANSPARENT);	
 			
 			root.setOnMousePressed(new EventHandler<MouseEvent>() {
 				@Override
@@ -41,20 +36,14 @@ public class Main extends Application {
 					primaryStage.setX(event.getScreenX() - x);
 					primaryStage.setY(event.getSceneY() - y);
 				}
-			});
-			
-			
+			});			
 			
 			//TODO: Crie suas próprias teclas de atalho
 			scene.setOnKeyPressed(e -> System.out.println(e.getCode()));
-			
-<<<<<<< HEAD
+
 			primaryStage.setTitle("Clientes");
-			primaryStage.setResizable(false);
-=======
+			//primaryStage.setResizable(false);
 			primaryStage.initStyle(StageStyle.TRANSPARENT);
-			primaryStage.setTitle("FTT Form");
->>>>>>> refs/remotes/origin/Rafael
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

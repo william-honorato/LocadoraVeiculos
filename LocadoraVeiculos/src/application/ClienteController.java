@@ -1,26 +1,13 @@
 package application;
 
-<<<<<<< HEAD
-=======
-import java.io.IOException;
->>>>>>> refs/remotes/origin/Rafael
 import java.net.URL;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-<<<<<<< HEAD
 import java.util.Date;
 import java.util.ResourceBundle;
-=======
-import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
->>>>>>> refs/remotes/origin/Rafael
-
 import DAO.ClienteDAO;
 import DAO.EstadoCivilDAO;
 import DAO.EstadoDAO;
@@ -31,33 +18,18 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-<<<<<<< HEAD
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-=======
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Parent;
->>>>>>> refs/remotes/origin/Rafael
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> refs/remotes/origin/Rafael
 public class ClienteController implements Initializable {
 
-	static int index = 0;
-	
-<<<<<<< HEAD
+	static int index = 0;	
+
 	//Listas para não ficar acessando o banco direto
 	ArrayList<Cliente> listaCliente = new ArrayList<>();
 	ArrayList<Estado> listaEstados = new ArrayList<>();
@@ -69,17 +41,6 @@ public class ClienteController implements Initializable {
     @FXML
     private ComboBox<EstadoCivil> comboEstadoCivil;
 
-=======
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	@FXML
-	private BorderPane borderpane;
-	
->>>>>>> refs/remotes/origin/Rafael
     @FXML
     private TextField txtCodCliente;
 
@@ -115,7 +76,6 @@ public class ClienteController implements Initializable {
     
     @FXML
     private Button btnUltimo;
-
     
     private void LimparTela() {
     	    	
@@ -128,6 +88,7 @@ public class ClienteController implements Initializable {
     	comboSexo.getSelectionModel().select(0);
     	txtNomeCliente.requestFocus();
     }
+
 
     private void PopularTela() {
     	Cliente c = listaCliente.get(index);
@@ -162,7 +123,8 @@ public class ClienteController implements Initializable {
     	
     }
 
-    @FXML
+    
+    @FXML    
     void ProximoRegistro(ActionEvent event) throws SQLException {
     	    	
     	if(index < listaCliente.size() - 1)
@@ -172,6 +134,7 @@ public class ClienteController implements Initializable {
     	}
     }
     
+
     @FXML
     void RegistroAnterior(ActionEvent event) throws SQLException {
     	
@@ -180,9 +143,8 @@ public class ClienteController implements Initializable {
     		--index;
     		PopularTela();
     	}
-    }
-    
-<<<<<<< HEAD
+    }    
+
     @FXML
     void SalvarRegistro(ActionEvent event) throws SQLException, ParseException {
     	
@@ -271,14 +233,15 @@ public class ClienteController implements Initializable {
 
     }
     
+
     @FXML
     void NovoRegistro(ActionEvent event) throws SQLException {
     	LimparTela();
     	txtNomeCliente.requestFocus();    	
     }
-    
-    
-    @FXML    
+        
+   
+    @FXML
     void ExcluirRegistro(ActionEvent event) throws SQLException {
     	
     	try {
@@ -299,15 +262,13 @@ public class ClienteController implements Initializable {
             		try {
 						new ClienteDAO().Excluir(cod_cliente);
 					} catch (SQLException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
             		LimparTela();
             		listaCliente.clear();
             		try {
 						listaCliente = new ClienteDAO().RetornaClientes();
-					} catch (SQLException e) {
-						// TODO Auto-generated catch block
+					} catch (SQLException e) {						
 						e.printStackTrace();
 					}
             		index = 0;
@@ -322,22 +283,23 @@ public class ClienteController implements Initializable {
     	
     }
     
+
     @FXML
     void PrimeiroRegistro(ActionEvent event) throws SQLException {
     	
     	index = 0;
     	PopularTela();
     }
-    
-    
+        
+
     @FXML
     void UltimoRegistro(ActionEvent event) throws SQLException {
     	    	
     	index = listaCliente.size() - 1;
     	PopularTela();
     }
-    
-    
+        
+
 	private void PopularCombos() throws SQLException {
 		
 		ObservableList<Estado> obsEstados = FXCollections.observableArrayList(listaEstados);		
@@ -352,7 +314,7 @@ public class ClienteController implements Initializable {
 	    comboSexo.getSelectionModel().select(0);	    
 	}
 	
-
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
@@ -376,54 +338,5 @@ public class ClienteController implements Initializable {
 			e.printStackTrace();
 		}
 	}
-=======
     
-    @FXML
-    private void close(MouseEvent event) {	
-    	
-    	Stage stage = (Stage) borderpane.getScene().getWindow();
-    	stage.close();
-    	
-    	
-    }
-    
-     
-    @FXML
-    private void estados(MouseEvent event) {
-    	loadUi("telaEstados");
-    }
-    
-    @FXML
-    private void clientes(MouseEvent event) {
-    	loadUi("telaClientes");
-    }
-    @FXML
-    private void alienacao(MouseEvent event) {
-    	loadUi("telaAlienacao");
-    }
-    @FXML
-    private void marcas(MouseEvent event) {
-    	loadUi("telaMarcas");
-    }
->>>>>>> refs/remotes/origin/Rafael
-
-    
-    private void loadUi(String ui) {
-    	Parent root = null;
-    	
-    	try {
-    		root = FXMLLoader.load(getClass().getResource(ui + ".fxml"));
-    		    		
-    	}catch(IOException ex){
-    		
-    		Logger.getLogger(ClienteController.class.getName()).log(Level.SEVERE, null, ex);
-    	}
-    	
-    	borderpane.setCenter(root);
-    	
-    }
-
-	
-    
-   
 }
