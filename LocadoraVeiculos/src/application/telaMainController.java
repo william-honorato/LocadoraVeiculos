@@ -87,7 +87,7 @@ public class telaMainController implements Initializable {
     		root = FXMLLoader.load(getClass().getResource(ui + ".fxml"));
     		    		
     	}catch(IOException ex){
-    		
+    		System.out.println(ex.getMessage());
     		Logger.getLogger(ClienteController.class.getName()).log(Level.SEVERE, null, ex);
     	}
     	

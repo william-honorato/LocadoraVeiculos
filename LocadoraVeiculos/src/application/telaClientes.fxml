@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ClienteController">
    <children>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 32px; -fx-fill: white;" text="Tela Clientes" />
+      <Pane prefHeight="300.0" prefWidth="700.0">
+         <children>
+            <Label layoutX="512.0" layoutY="30.0" text="Data de Nascimento:" textFill="WHITE" />
+            <Label layoutX="149.0" layoutY="30.0" text="Nome:" textFill="WHITE" />
+            <Label layoutX="28.0" layoutY="30.0" text="Código:" textFill="WHITE" />
+            <TextField fx:id="txtDtNascimento" layoutX="512.0" layoutY="61.0" prefHeight="31.0" prefWidth="162.0" />
+            <TextField fx:id="txtNomeCliente" layoutX="145.0" layoutY="61.0" prefHeight="31.0" prefWidth="348.0" />
+            <TextField fx:id="txtCodCliente" disable="true" layoutX="28.0" layoutY="61.0" prefHeight="31.0" prefWidth="92.0" />
+            <Label layoutX="488.0" layoutY="126.0" text="Estado:" textFill="WHITE" />
+            <Label layoutX="325.0" layoutY="126.0" text="Estado Civil:" textFill="WHITE" />
+            <Label layoutX="183.0" layoutY="126.0" text="Rendimento:" textFill="WHITE" />
+            <Label layoutX="28.0" layoutY="126.0" text="Sexo:" textFill="WHITE" />
+            <ComboBox fx:id="comboSexo" layoutX="28.0" layoutY="154.0" prefHeight="31.0" prefWidth="138.0" />
+            <ComboBox fx:id="comboEstado" layoutX="487.0" layoutY="154.0" prefHeight="31.0" prefWidth="189.0" />
+            <ComboBox fx:id="comboEstadoCivil" layoutX="324.0" layoutY="154.0" prefHeight="31.0" prefWidth="146.0" />
+            <TextField fx:id="txtRendimento" layoutX="183.0" layoutY="154.0" prefHeight="31.0" prefWidth="125.0" />
+            <Button fx:id="btnUltimo" layoutX="209.0" layoutY="246.0" mnemonicParsing="false" onAction="#UltimoRegistro" prefHeight="31.0" prefWidth="45.0" text="&gt;&gt;" />
+            <Button fx:id="btnPrimeiro" layoutX="28.0" layoutY="246.0" mnemonicParsing="false" onAction="#PrimeiroRegistro" prefHeight="31.0" prefWidth="45.0" text="&lt;&lt;" />
+            <Button fx:id="btnNovo" layoutX="470.0" layoutY="246.0" mnemonicParsing="false" onAction="#NovoRegistro" text="Novo" />
+            <Button fx:id="btnExcluir" layoutX="613.0" layoutY="246.0" mnemonicParsing="false" onAction="#ExcluirRegistro" text="Excluir" />
+            <Button fx:id="btnSalvar" layoutX="543.0" layoutY="246.0" mnemonicParsing="false" onAction="#SalvarRegistro" text="Salvar" />
+            <Button fx:id="btnProximo" layoutX="148.0" layoutY="246.0" mnemonicParsing="false" onAction="#ProximoRegistro" prefHeight="31.0" prefWidth="45.0" text="&gt;">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAnterior" layoutX="91.0" layoutY="246.0" mnemonicParsing="false" onAction="#RegistroAnterior" prefHeight="31.0" prefWidth="45.0" text="&lt;" />
+         </children>
+      </Pane>
    </children>
 </HBox>
