@@ -203,9 +203,7 @@ public class telaClienteController implements Initializable {
         	alert.setContentText("Digite o valor do rendimento no formato 999,99");
         	alert.show();
     		return;
-		}
-    	
-   	
+		} 	
     	
     	cliente.setCod_estado_civil(comboEstadoCivil.getValue().getCod_estado_civil());
     	cliente.setCod_uf(comboEstado.getValue().getCod_uf());
@@ -230,14 +228,12 @@ public class telaClienteController implements Initializable {
 
     }
     
-
     @FXML
     void NovoRegistro(ActionEvent event) throws SQLException {
     	LimparTela();
     	txtNomeCliente.requestFocus();    	
     }
-        
-   
+      
     @FXML
     void ExcluirRegistro(ActionEvent event) throws SQLException {
     	
@@ -280,14 +276,12 @@ public class telaClienteController implements Initializable {
     	
     }
     
-
     @FXML
     void PrimeiroRegistro(ActionEvent event) throws SQLException {
     	
     	index = 0;
     	PopularTela();
     }
-        
 
     @FXML
     void UltimoRegistro(ActionEvent event) throws SQLException {
@@ -295,7 +289,6 @@ public class telaClienteController implements Initializable {
     	index = listaCliente.size() - 1;
     	PopularTela();
     }
-        
 
 	private void PopularCombos() throws SQLException {
 		
@@ -310,7 +303,6 @@ public class telaClienteController implements Initializable {
 	    comboSexo.getItems().addAll("Masculino","Feminino");
 	    comboSexo.getSelectionModel().select(0);	    
 	}
-	
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

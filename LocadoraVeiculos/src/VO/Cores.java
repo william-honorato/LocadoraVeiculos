@@ -17,4 +17,10 @@ public class Cores {
 	public void setDesc_cor(String desc_cor) {
 		this.desc_cor = desc_cor;
 	}
+	
+	//Sobrescreve toString e passa o que vai aparecer no combobox
+	@Override
+	public String toString() {
+		return desc_cor;		
+	}
 }

@@ -10,6 +10,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import VO.Cliente;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 
 public class ClienteDAO extends Conexao {
 	
@@ -127,7 +129,9 @@ public class ClienteDAO extends Conexao {
 			while (rs.next()) {
 				Cliente cliente = new Cliente();
 				cliente.setCod_cliente(rs.getInt("cod_cliente"));
+				cliente.setColCodigo(new SimpleIntegerProperty(rs.getInt("cod_cliente")));
 				cliente.setNome(rs.getString("nome"));
+				cliente.setColNome(new SimpleStringProperty(rs.getString("nome")));
 				cliente.setDt_nascimento(rs.getDate("dt_nascimento"));
 				cliente.setTipo_pessoa(rs.getString("tipo_pessoa"));
 				cliente.setCod_estado_civil(rs.getString("cod_estado_civil"));				
@@ -148,7 +152,44 @@ public class ClienteDAO extends Conexao {
 		
 		return listaClientes;		
 	}
+
+	public Cliente RetornaCliente(int cod_cliente) throws SQLException{
 		
+		 Cliente cliente = new Cliente();
+		 Connection conexao = Conexao.getConexao();
+		
+		try {
+			Statement stm = conexao.createStatement();
+			
+			String sql = "select * from tb_clientes where cod_cliente = " + cod_cliente;
+			
+			ResultSet rs = stm.executeQuery(sql);
+			
+			while (rs.next()) {				
+				cliente.setCod_cliente(rs.getInt("cod_cliente"));
+				cliente.setColCodigo(new SimpleIntegerProperty(rs.getInt("cod_cliente")));
+				cliente.setNome(rs.getString("nome"));
+				cliente.setColNome(new SimpleStringProperty(rs.getString("nome")));
+				cliente.setDt_nascimento(rs.getDate("dt_nascimento"));
+				cliente.setTipo_pessoa(rs.getString("tipo_pessoa"));
+				cliente.setCod_estado_civil(rs.getString("cod_estado_civil"));				
+				cliente.setRendimento(rs.getDouble("rendimento"));
+				cliente.setCod_uf(rs.getString("cod_uf"));				
+			} //while
+
+			stm.close();
+		}
+		catch(Exception erro){
+			
+		}
+		finally{
+			//Fecha a conexão, ao finalizar
+			conexao.close();
+		}
+		
+		return cliente;		
+	}
+	
 	public void Excluir(int cod_cliente) throws SQLException {
 		
 		Connection conexao = Conexao.getConexao();

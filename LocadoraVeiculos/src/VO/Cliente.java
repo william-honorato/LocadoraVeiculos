@@ -2,9 +2,11 @@ package VO;
 
 import java.util.Date;
 
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 public class Cliente {
-	
-	
+		
 	private int cod_cliente;
 	private String nome;
 	private Date dt_nascimento;
@@ -12,6 +14,23 @@ public class Cliente {
 	private String cod_estado_civil;
 	private double rendimento;
 	private String cod_uf;
+	
+	//Usado na Pesquisa
+	public SimpleIntegerProperty colCodigo;
+	public SimpleStringProperty colNome;
+    
+    public void setColCodigo(SimpleIntegerProperty colCodigo) {
+		this.colCodigo = colCodigo;
+	}
+	public void setColNome(SimpleStringProperty colNome) {
+		this.colNome = colNome;
+	}	
+	public SimpleIntegerProperty getColCodigo() {
+		return colCodigo;
+	}
+	public SimpleStringProperty getColNome() {
+		return colNome;
+	}
 	
 	public int getCod_cliente() {
 		return cod_cliente;

@@ -17,4 +17,10 @@ public class Marcas {
 	public void setDesc_marca(String desc_marca) {
 		this.desc_marca = desc_marca;
 	}
+	
+	//Sobrescreve toString e passa o que vai aparecer no combobox
+	@Override
+	public String toString() {
+		return desc_marca;		
+	}
 }

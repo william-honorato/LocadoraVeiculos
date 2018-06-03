@@ -7,14 +7,18 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.telaPesquisaClienteController">
    <children>
-      <Pane prefHeight="416.0" prefWidth="400.0">
+      <Pane prefHeight="416.0" prefWidth="550.0">
          <children>
-         	<TextField layoutX="25.0" layoutY="36.0" prefHeight="31.0" prefWidth="258.0" />
-            <Button layoutX="295.0" layoutY="36.0" mnemonicParsing="false" onAction="#pesquisarCliente" text="Pesquisar" />            
-            <TableView layoutX="25.0" layoutY="82.0" prefHeight="320.0" prefWidth="354.0">
+         	<TextField fx:id="txtPesquisa" layoutX="25.0" layoutY="36.0" prefHeight="31.0" prefWidth="396.0" />
+            <Button fx:id="btnPesquisar" layoutX="442.0" layoutY="36.0" mnemonicParsing="false" onAction="#pesquisarCliente" text="Pesquisar" />            
+            <TableView fx:id="tabela" layoutX="25.0" layoutY="82.0" prefHeight="320.0" prefWidth="500.0">
               <columns>
-                <TableColumn prefWidth="116.0" text="Código" />
-                <TableColumn prefWidth="236.0" text="Nome" />
+                <TableColumn fx:id="colCodigo" maxWidth="150.0" prefWidth="150.0" text="Código">
+
+                </TableColumn>
+                <TableColumn fx:id="colNome" maxWidth="350.0" prefWidth="350.0" text="Nome">
+               
+                </TableColumn>
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
