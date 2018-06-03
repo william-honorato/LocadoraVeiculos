@@ -22,7 +22,7 @@ public class Main extends Application {
 			Scene scene = new Scene(root);
 			scene.setFill(Color.TRANSPARENT);	
 			
-			root.setOnMousePressed(new EventHandler<MouseEvent>() {
+			/*root.setOnMousePressed(new EventHandler<MouseEvent>() {
 				@Override
 				public void handle(MouseEvent event) {
 					x = event.getSceneX();
@@ -36,14 +36,14 @@ public class Main extends Application {
 					primaryStage.setX(event.getScreenX() - x);
 					primaryStage.setY(event.getSceneY() - y);
 				}
-			});			
+			});*/
 			
 			//TODO: Crie suas próprias teclas de atalho
 			scene.setOnKeyPressed(e -> System.out.println(e.getCode()));
 
-			primaryStage.setTitle("Clientes");
-			//primaryStage.setResizable(false);
-			primaryStage.initStyle(StageStyle.TRANSPARENT);
+			primaryStage.setTitle("Alienação de veículos");
+			primaryStage.setResizable(false);
+			//primaryStage.initStyle(StageStyle.TRANSPARENT);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

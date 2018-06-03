@@ -11,7 +11,7 @@
    <left>
       <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #303030;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnEstados" mnemonicParsing="false" onMouseClicked="#estados" prefHeight="40.0" prefWidth="106.0" style="-fx-text-fill: #f0ffff; -fx-background-color: #505050;" text="Estados">
+            <Button fx:id="btnAlienacao" mnemonicParsing="false" onMouseClicked="#alienacao" prefHeight="40.0" prefWidth="106.0" style="-fx-text-fill: #f0ffff; -fx-background-color: #505050;" text="Alienação">
                <padding>
                   <Insets top="10.0" />
                </padding>
@@ -27,7 +27,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnAlienacao" mnemonicParsing="false" onMouseClicked="#alienacao" prefHeight="40.0" prefWidth="106.0" style="-fx-text-fill: #f0ffff; -fx-background-color: #303030;" text="Alienação">
+            <Button fx:id="btnMarcas" mnemonicParsing="false" onMouseClicked="#marcas" prefHeight="40.0" prefWidth="106.0" style="-fx-text-fill: #f0ffff; -fx-background-color: #303030;" text="Marcas">
                <padding>
                   <Insets top="10.0" />
                </padding>
@@ -35,7 +35,7 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnMarcas" mnemonicParsing="false" onMouseClicked="#marcas" prefHeight="40.0" prefWidth="106.0" style="-fx-text-fill: #f0ffff; -fx-background-color: #303030;" text="Marcas">
+            <Button fx:id="btnRelatorio" mnemonicParsing="false" onMouseClicked="#relatorio" prefHeight="40.0" prefWidth="106.0" style="-fx-text-fill: #f0ffff; -fx-background-color: #303030;" text="Relatório">
                <padding>
                   <Insets top="10.0" />
                </padding>
@@ -49,21 +49,4 @@
          </BorderPane.margin>
       </VBox>
    </left>
-   <top>
-      <HBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER_RIGHT">
-         <children>
-            <ImageView fitWidth="24.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
-               <HBox.margin>
-                  <Insets right="10.0" top="10.0" />
-               </HBox.margin>
-               <image>
-                  <Image url="@close-icon.png" />
-               </image>
-            </ImageView>
-         </children>
-         <padding>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-         </padding>
-      </HBox>
-   </top>
 </BorderPane>

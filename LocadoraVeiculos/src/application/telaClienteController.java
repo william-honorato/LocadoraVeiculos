@@ -26,7 +26,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
-public class ClienteController implements Initializable {
+public class telaClienteController implements Initializable {
 
 	static int index = 0;	
 
@@ -119,10 +119,8 @@ public class ClienteController implements Initializable {
     		comboSexo.setValue("Masculino");
     	}else {
     		comboSexo.setValue("Feminino");
-    	}
-    	
+    	}    	
     }
-
     
     @FXML    
     void ProximoRegistro(ActionEvent event) throws SQLException {
@@ -133,7 +131,6 @@ public class ClienteController implements Initializable {
     		PopularTela();
     	}
     }
-    
 
     @FXML
     void RegistroAnterior(ActionEvent event) throws SQLException {

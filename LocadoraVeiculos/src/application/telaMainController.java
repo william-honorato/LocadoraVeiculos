@@ -28,14 +28,14 @@ public class telaMainController implements Initializable {
     private Button btnMarcas;
 
     @FXML
-    private Button btnEstados;
+    private Button btnRelatorio;
 
     @FXML
     private Button btnClientes;
     
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		loadUi("telaEstados");
+		loadUi("telaAlienacao");
 	}
 	
     @FXML
@@ -46,17 +46,17 @@ public class telaMainController implements Initializable {
     }    
     
     private void LimparSelecaoButtons() {
-    	btnEstados.setStyle("-fx-text-fill: #f0ffff; -fx-background-color: #303030;");
+    	btnRelatorio.setStyle("-fx-text-fill: #f0ffff; -fx-background-color: #303030;");
     	btnClientes.setStyle("-fx-text-fill: #f0ffff; -fx-background-color: #303030;");
     	btnMarcas.setStyle("-fx-text-fill: #f0ffff; -fx-background-color: #303030;");
     	btnAlienacao.setStyle("-fx-text-fill: #f0ffff; -fx-background-color: #303030;");
     }
     
     @FXML
-    private void estados(MouseEvent event) {
-    	loadUi("telaEstados");
+    private void relatorio(MouseEvent event) {
+    	loadUi("telaRelatorio");
     	LimparSelecaoButtons();
-    	btnEstados.setStyle("-fx-text-fill: #f0ffff; -fx-background-color: #505050;");
+    	btnRelatorio.setStyle("-fx-text-fill: #f0ffff; -fx-background-color: #505050;");
     }
             
     @FXML
@@ -88,7 +88,7 @@ public class telaMainController implements Initializable {
     		    		
     	}catch(IOException ex){
     		System.out.println(ex.getMessage());
-    		Logger.getLogger(ClienteController.class.getName()).log(Level.SEVERE, null, ex);
+    		Logger.getLogger(telaClienteController.class.getName()).log(Level.SEVERE, null, ex);
     	}
     	
     	borderpane.setCenter(root);    	

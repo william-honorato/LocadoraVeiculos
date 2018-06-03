@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.telaAlienacaoController">
    <children>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 32px; -fx-fill: white;" text="Tela Alienação" />
+      <Pane prefHeight="300.0" prefWidth="700.0">
+         <children>
+            <Label layoutX="24.0" layoutY="14.0" text="Código:" textFill="WHITE" />
+            <Label layoutX="140.0" layoutY="14.0" text="Cliente:" textFill="WHITE" />
+            <TextField layoutX="24.0" layoutY="45.0" prefHeight="31.0" prefWidth="105.0" />
+            <TextField editable="false" layoutX="140.0" layoutY="45.0" onMouseClicked="#abrirPesquisaCliente" />
+         </children>
+      </Pane>
    </children>
 </HBox>
